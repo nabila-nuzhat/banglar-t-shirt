@@ -5,13 +5,10 @@ import { Outlet } from 'react-router-dom';
 const MainLayout = () => {
     return (
         <div>
-            {/* for common layout over whole website */}
-            
-            <Header></Header>
-            
-            {/* The pages and routes that will change is under Outlet */}
-            
-            <Outlet></Outlet>
+           <Header></Header>
+           <Outlet></Outlet>
+             {/* for common layout over whole website */}
+               {/* The pages and routes that will change is under Outlet */}
         </div>
     );
 };
