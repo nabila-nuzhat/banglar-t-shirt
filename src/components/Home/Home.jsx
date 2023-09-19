@@ -9,7 +9,25 @@ const Home = () => {
     const [cart, setCart] = useState ([]);
 
     const handleAddToCart = tshirt =>{
-        console.log(tshirt);
+        // console.log(tshirt);
+        const exists = cart.find(ts =>ts._id === tshirt._id); // if want to set cannot purchase more than 1 tshirt
+
+        if(exists){
+            // alert/toast
+        }
+        else{
+            const newCart = [...cart, tshirt];
+            setCart(newCart);
+        }
+        // const newCart = [...cart, tshirt];
+        // setCart(newCart);
+    }
+
+    const handleRemoveFromCart =  id =>{
+        // console.log(id);
+
+        const remaining =  cart.filter(ts => ts._id !== id);
+        setCart(remaining);
     }
     return (
         <div className='home-container'>
@@ -22,7 +40,8 @@ const Home = () => {
             </div>
 
             <div className="cart-container">
-                <Cart></Cart>
+                <Cart cart={cart}
+                handleRemoveFromCart={handleRemoveFromCart}></Cart>
             </div>
             
         </div>
