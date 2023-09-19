@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import TShirt from '../TShirt/TShirt';
 import Cart from '../Cart/Cart';
 import '../Home/Home.css'
+import toast from 'react-hot-toast';
 
 const Home = () => {
     const tshirts = useLoaderData();
@@ -13,7 +14,8 @@ const Home = () => {
         const exists = cart.find(ts =>ts._id === tshirt._id); // if want to set cannot purchase more than 1 tshirt
 
         if(exists){
-            // alert/toast
+            // alert/toast for cannot purchase more than 1 tshirt
+            toast('You have already added the thirt')
         }
         else{
             const newCart = [...cart, tshirt];
