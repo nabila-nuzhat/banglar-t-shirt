@@ -1,5 +1,5 @@
-.grandpa-1, 
-.grandpa-1 div{
+.grandpa, 
+.grandpa div{
     border: 2px solid goldenrod;
     padding: 10px;
     margin: 20px;
@@ -8,7 +8,7 @@
     width: fit-content;
 }
 
-.grandpa-2, 
+/* .grandpa-2, 
 .grandpa-2 div{
     border: 2px solid slateblue;
     padding: 10px;
@@ -16,7 +16,7 @@
     border-radius: 10px;
     text-align: center;
     width: fit-content;
-}
+} */
 
 .flex{
     display: flex;
